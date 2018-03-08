@@ -22,4 +22,4 @@ rule diamond:
 rule hist:
 	input: "lengths/{id}.data"
 	output: "hists/{id}.png"
-	shell: "scripts/ist.R {input} {output}"
+	shell: "scripts/hist.R {input} {output}"
