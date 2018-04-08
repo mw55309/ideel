@@ -11,7 +11,7 @@ fileout <- args[2]
 data <- read.table(filein, sep="\t", header=FALSE)
 
 # breaks
-bks <- seq(0,50,by=0.05)
+bks <- seq(0,max(data$V1/data$V2)+1,by=0.05)
 
 # main hist
 png(fileout, width=800, height=800, type="cairo")
