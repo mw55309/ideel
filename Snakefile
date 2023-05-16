@@ -32,7 +32,7 @@ rule diamond:
 	params:
 		of="6 qlen slen"
 	conda: "envs/diamond.yaml"
-
+	threads: 16
 	shell: "diamond blastp --threads {threads} --max-target-seqs 1 --db {input.ref} --query {input.pro} --outfmt {params.of} --out {output}"
 
 	
